@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     environment {
-        def REPO_URL = "https://github.com/seraageldin/CI-CD-Project-w-Jenkins-Pipeline.git" 
-        def BRANCH_NAME = "main" // Replace with the branch you are working on
-        def IMAGE_NAME = "project_image". 
-        def CONTAINER_NAME = "cont_1"
-        def VOLUME_NAME = "vol_1"
+        REPO_URL = "https://github.com/seraageldin/CI-CD-Project-w-Jenkins-Pipeline.git"
+        BRANCH_NAME = "main" // Replace with the branch you are working on
+        IMAGE_NAME = "project_image"
+        CONTAINER_NAME = "cont_1"
+        VOLUME_NAME = "vol_1"
     }
 
     stages {
@@ -16,7 +16,7 @@ pipeline {
                 git branch: "${BRANCH_NAME}", url: "${REPO_URL}"
                 script {
                     // Checking out the repo content and listing the files
-                    sh 'ls -la ${JENKINS_HOME}/workspace/${JOB_NAME}'
+                    sh "ls -la ${JENKINS_HOME}/workspace/${JOB_NAME}"
                 }
             }
             post {
