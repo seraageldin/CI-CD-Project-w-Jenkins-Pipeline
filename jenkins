@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        REPO_URL = 'your-git-repo-url'  // Replace with your Git repo URL
-        BRANCH_NAME = 'your-branch-name' // Replace with the branch you are working on
-        IMAGE_NAME = 'project_image'
+        REPO_URL = 'https://github.com/seraageldin/CI-CD-Project-w-Jenkins-Pipeline.git'  
+        BRANCH_NAME = 'main' // Replace with the branch you are working on
+        IMAGE_NAME = 'project_image'. 
         CONTAINER_NAME = 'cont_1'
         VOLUME_NAME = 'vol_1'
     }
