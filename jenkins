@@ -16,7 +16,7 @@ pipeline {
                 git branch: "${BRANCH_NAME}", url: "${REPO_URL}"
                 script {
                     // Checking out the repo content and listing the files
-                    sh "ls -la ${JENKINS_HOME}/workspace/${JOB_NAME}"
+                    sh "ls -la ${JENKINS_HOME}/workspace/CI-CD-Project-w-Jenkins-Pipeline/${JOB_NAME}"
                 }
             }
             post {
@@ -34,7 +34,7 @@ pipeline {
                 echo 'Building Docker image...'
                 script {
                     sh """
-                        cd ${JENKINS_HOME}/workspace/${JOB_NAME}/CICD-Simple-Project
+                        cd ${JENKINS_HOME}/workspace/CI-CD-Project-w-Jenkins-Pipeline/${JOB_NAME}/
                         sudo docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .
                     """
                 }
