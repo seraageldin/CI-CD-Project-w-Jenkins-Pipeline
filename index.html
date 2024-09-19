@@ -4,112 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Docker Form Page</title>
+    <title>Welcome Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #add8e6; /* Baby Blue background */
+            background-image: url('https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 400px 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
         }
 
-        header {
-            background-color: #4CAF50;
-            padding: 20px;
-            color: white;
-        }
-
         h1 {
-            margin: 0;
-        }
-
-        .content {
-            margin: 20px auto;
-            max-width: 600px;
-            text-align: left;
-        }
-
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin: 15px 0 5px;
-            font-weight: bold;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            font-size: 4em;
             color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            text-shadow: 2px 2px 5px #000;
         }
 
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .docker-image {
-            margin-top: 40px;
-        }
-
-        .docker-image img {
-            width: 200px;
-        }
-
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #222;
+        h2 {
+            font-size: 2em;
             color: white;
+            text-shadow: 1px 1px 3px #000;
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Docker Form Page</h1>
-    </header>
-
-    <div class="content">
-        <h2>Submit Your Details</h2>
-        <form action="/submit" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-
-        <div class="docker-image">
-            <h2>Docker Logo</h2>
-            <img src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" alt="Docker Logo">
-        </div>
+    <div>
+        <h1>Welcome</h1>
+        <h2>Hello World</h2>
     </div>
-
-    <footer>
-        <p>© 2024 Docker Form Page. All rights reserved.</p>
-    </footer>
-
 </body>
 </html>
